@@ -21,6 +21,7 @@ export default function SelectDateTime({ navigation }) {
         params: {
           date: date.getTime(),
         },
+        
       });
 
       console.tron.log(response.data);
@@ -30,7 +31,7 @@ export default function SelectDateTime({ navigation }) {
     loadAvailable();
   }, [date, provider.id]);
 
-  function handleSelectHour(value) {
+  function handleSelectHour(time) {
     navigation.navigate('Confirm', {
       provider,
       time,
